@@ -1,10 +1,17 @@
+import axios from 'axios';
 import React from 'react';
+import ListProducts from "@/components/products/ListProducts"
 
-const HomePage = () => {
+const getProduct = async () =>{
+  const {data} = await axios.get(`${process.env.API_URL}/api/products`)
+  return data;
+}
+
+const HomePage = async () => {
+
+  const productData = await getProduct()
   return (
-    <div>
-      <h1 className="text-2xl text-green-300 font-bold underline">Hello, Next.js!</h1>
-    </div>
+    <ListProducts data={productData}/>
   );
 };
 

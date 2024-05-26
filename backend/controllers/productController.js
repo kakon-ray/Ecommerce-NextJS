@@ -9,8 +9,8 @@ export const newProduct = async (req, res, next) => {
 
 
   export const getProduct = async (req, res, next) => {
-    const product = await Product.find();
+    const products = await Product.find();
     res.status(200).json({
-      product,
+      products,
     });
   };

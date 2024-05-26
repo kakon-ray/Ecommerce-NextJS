@@ -12,6 +12,7 @@ const HomePage = async () => {
   const productData = await getProduct()
   return (
     <ListProducts data={productData}/>
+    // <h1>Hello</h1>
   );
 };
 

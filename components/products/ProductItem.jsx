@@ -17,8 +17,8 @@ const ProductItem = ({item}) => {
                 position: "relative",
               }}
             >
-              <Image
-                src={item?.images[0] ? product?.images[0].url : "/images/bosba kohtae.jpeg"}
+              <img
+                src={item?.images[0] ? item?.images[0].url : "/images/bosba kohtae.jpeg"}
                 alt="product anme"
                 height="200"
                 width="240"
